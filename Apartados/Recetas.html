@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas Recientes - Nutri Recetas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900 bg-secondary">
+
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">NUTRI RECETAS</h1>
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScRzIrnuuUcvD7qG8AYYmBf8UiLkLgFscd20DNPIuoKYt7K-Q/viewform?usp=dialog" class="border border-black px-4 py-2 font-semibold" target="_blank">CONTACTO</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-[350px]">
+        <img src="/assets/images/ImagenCabecera2.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Comidas Recientes">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+            <h2 class="text-white text-5xl font-bold">Comidas Recientemente Añadidas</h2>
+            <p class="text-white text-lg mt-2">Descubre las últimas recetas saludables</p>
+        </div>
+    </section>
+
+    <!-- Sección de Recetas Recientes -->
+    <section class="container mx-auto px-6 py-16">
+        <h3 class="text-3xl font-bold text-center">Nuevas Recetas</h3>
+        <p class="text-gray-700 text-center mt-2">Explora nuestras últimas recetas nutritivas y deliciosas</p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+            <!-- Tarjeta 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/Receta1_EnsaladaDeAguacate.jpg" class="w-full h-56 object-cover" alt="Ensalada de Quinoa">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Ensalada de Aguacate</h4>
+                    <p class="text-gray-700 mt-2">Una ensalada fresca y llena de proteínas, perfecta para el almuerzo.</p>
+                    <a href="/Recetas/receta1_EnsaladaDeAguacate.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/Receta2_PastaIntegralVerduras.jpg" class="w-full h-56 object-cover" alt="Pasta Integral con Verduras">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Pasta Integral con Verduras</h4>
+                    <p class="text-gray-700 mt-2">Una receta fácil y saludable con ingredientes naturales.</p>
+                    <a href="/Recetas/receta2_PastaIntegralVerduras.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://source.unsplash.com/600x400/?chicken" class="w-full h-56 object-cover" alt="Pollo a la Parrilla">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Pollo a la Parrilla</h4>
+                    <p class="text-gray-700 mt-2">Jugoso y marinado con especias, ideal para una cena saludable.</p>
+                    <a href="#" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://source.unsplash.com/600x400/?vegetable-soup" class="w-full h-56 object-cover" alt="Sopa de Verduras">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Sopa de Verduras</h4>
+                    <p class="text-gray-700 mt-2">Una sopa ligera y reconfortante para cualquier ocasión.</p>
+                    <a href="#" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://source.unsplash.com/600x400/?avocado-toast" class="w-full h-56 object-cover" alt="Tostadas con Aguacate">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Tostadas con Aguacate</h4>
+                    <p class="text-gray-700 mt-2">Rápidas, nutritivas y perfectas para el desayuno o snack.</p>
+                    <a href="#" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://source.unsplash.com/600x400/?healthy-bowl" class="w-full h-56 object-cover" alt="Bowl Energético">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Bowl Energético</h4>
+                    <p class="text-gray-700 mt-2">Un bowl lleno de frutas y superalimentos para empezar el día.</p>
+                    <a href="#" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutri Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="/Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="/Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para actualizar el año dinámicamente -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

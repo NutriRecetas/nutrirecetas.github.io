@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Recetas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900">
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">NUTRI RECETAS</h1>
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScRzIrnuuUcvD7qG8AYYmBf8UiLkLgFscd20DNPIuoKYt7K-Q/viewform?usp=dialog" class="border border-black px-4 py-2 font-semibold" target="_blank">CONTACTO</a>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="relative w-full h-[500px]">
+        <img src="/assets/images/ImagenCabecera3.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Comida Saludable">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start px-10 md:px-20">
+            <h2 class="text-white text-5xl font-bold">El mejor sitio de recetas saludables</h2>
+            <p class="text-white text-lg mt-2">Comidas rápidas y accesibles para todos</p>
+        </div>
+    </section>
+
+    <!-- Sección Categorías -->
+    <section class="container mx-auto px-6 py-20">
+        <p class="text-primary font-semibold uppercase text-center">Explora por categoría</p>
+        <h2 class="text-3xl font-bold text-center mt-2">Encuentra la receta perfecta para cada ocasión</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+            <!-- Categoría 1 -->
+            <a href="#" class="block bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="/assets/images/Categorias/Postres.jpg" class="w-full h-56 object-cover" alt="Postres">
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-semibold">Postres</h3>
+                </div>
+            </a>
+            <!-- Categoría 2 -->
+            <a href="#" class="block bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="/assets/images/Categorias/Desayunos.jpg" class="w-full h-56 object-cover" alt="Desayunos">
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-semibold">Desayunos</h3>
+                </div>
+            </a>
+            <!-- Categoría 3 -->
+            <a href="#" class="block bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="/assets/images/ImagenCabecera2.jpg" class="w-full h-56 object-cover" alt="Comidas">
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-semibold">Comidas</h3>
+                </div>
+            </a>
+            <!-- Categoría 4 -->
+            <a href="#" class="block bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="/assets/images/Categorias/Airfyer.jpg" class="w-full h-56 object-cover" alt="Airfryer">
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-semibold">Airfryer</h3>
+                </div>
+            </a>
+            <!-- Categoría 5 -->
+            <a href="#" class="block bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="/assets/images/Categorias/Cenas.jpg" class="w-full h-56 object-cover" alt="Cenas">
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-semibold">Cenas</h3>
+                </div>
+            </a>
+            <!-- Categoría 6 -->
+            <a href="#" class="block bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition">
+                <img src="/assets/images/Categorias/SnacksSaludables.jpg" class="w-full h-56 object-cover" alt="Snacks saludables">
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-semibold">Snacks Saludables</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutri Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para actualizar el año dinámicamente -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
