@@ -29,11 +29,21 @@
         }
     </style>
 </head>
-<body class="font-sans text-gray-900 bg-white">
+<body class="font-sans text-gray-900">
 
+    <!-- Navbar -->
     <header class="w-full bg-white shadow-sm">
         <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <h1 class="text-2xl font-bold">NUTRÍ RECETAS</h1>
+            <h1 class="text-2xl font-bold">NUTRI RECETAS</h1>
+            
+            <!-- Botón de menú hamburguesa (visible en móvil) -->
+            <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+            </button>
+
+            <!-- Menú normal (visible en escritorio) -->
             <nav class="space-x-6 text-gray-700 hidden md:flex">
                 <a href="/index.html" class="hover:text-black">Inicio</a>
                 <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
@@ -41,6 +51,51 @@
             </nav>
         </div>
     </header>
+
+    <!-- Sidebar móvil -->
+    <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-6">
+            <button id="close-btn" class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Menú</h2>
+            <nav class="space-y-4 text-gray-700">
+                <a href="/index.html" class="block hover:text-primary">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="block hover:text-primary">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="block hover:text-primary">Recetas</a>
+
+            </nav>
+        </div>
+    </div>
+
+    <!-- Overlay oscuro cuando el menú está abierto -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <!-- JavaScript para mostrar y ocultar el sidebar -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+    </script>
+
 
     <section class="relative w-full h-[400px]">
         <img src="/assets/images/Recetas/PostreSanoAirfryer.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Postre de plátano en AirFryer">
