@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuggets Congelados Perfectos en Air Fryer - Receta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">NUTRI RECETAS</h1>
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative w-full h-[400px]">
+        <img src="/assets/images/Recetas/NuggetAirFryer.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Nuggets en Air Fryer">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start px-10 md:px-20">
+            <h2 class="text-white text-5xl font-bold">Nuggets Congelados Perfectos en Air Fryer</h2>
+            <p class="text-white text-lg mt-2">Crujientes por fuera y jugosos por dentro, listos en minutos.</p>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-16 flex flex-col md:flex-row gap-10">
+        <div class="md:w-2/3">
+            <h3 class="text-3xl font-bold">Ingredientes</h3>
+            <ul class="mt-4 space-y-3 text-gray-700">
+                <li class="flex items-center">
+                    <input type="checkbox" id="ingrediente1" class="mr-2 w-5 h-5">
+                    <label for="ingrediente1" class="text-lg">250 g de nuggets de pollo congelados</label>
+                </li>
+                <li class="flex items-center">
+                    <input type="checkbox" id="ingrediente2" class="mr-2 w-5 h-5">
+                    <label for="ingrediente2" class="text-lg">Aceite en aerosol (opcional)</label>
+                </li>
+                <li class="flex items-center">
+                    <input type="checkbox" id="ingrediente3" class="mr-2 w-5 h-5">
+                    <label for="ingrediente3" class="text-lg">Salsa de tu elección para acompañar</label>
+                </li>
+            </ul>
+
+            <h3 class="text-3xl font-bold mt-10">Instrucciones</h3>
+            <ol class="mt-4 space-y-4 text-gray-700 list-decimal list-inside">
+                <li>Precalienta la Air Fryer a 200°C por 3 minutos.</li>
+                <li>Coloca los nuggets en la canasta en una sola capa, sin amontonarlos.</li>
+                <li>Rocía ligeramente con aceite en aerosol para mayor crocancia (opcional).</li>
+                <li>Cocina a 200°C durante 10-12 minutos, volteándolos a la mitad del tiempo.</li>
+                <li>Retira los nuggets cuando estén dorados y crujientes.</li>
+                <li>Sirve con tu salsa favorita y disfruta.</li>
+            </ol>
+        </div>
+
+        <div class="md:w-1/3 bg-secondary p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold">Detalles de la Receta</h3>
+            <p class="mt-2 text-gray-700"><strong>Tiempo de Preparación:</strong> 12 minutos</p>
+            <p class="mt-1 text-gray-700"><strong>Porciones:</strong> 2 personas</p>
+            <p class="mt-1 text-gray-700"><strong>Calorías:</strong> 300 kcal por porción</p>
+
+            <h3 class="text-xl font-bold mt-6">Nivel de Dificultad</h3>
+            <p class="mt-2 text-gray-700 flex items-center">
+                <span class="text-primary font-semibold">Fácil</span> 
+                <span class="ml-2 text-yellow-400 text-lg">★ ☆ ☆ ☆ ☆</span>
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutrí Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="/Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="/Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

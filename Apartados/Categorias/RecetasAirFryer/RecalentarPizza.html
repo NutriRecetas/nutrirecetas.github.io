@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Recalentada en AirFryer - Receta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">NUTRÍ RECETAS</h1>
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative w-full h-[400px]">
+        <img src="/assets/images/Recetas/RecalentarPizza.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Pizza recalentada en AirFryer">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start px-10 md:px-20">
+            <h2 class="text-white text-5xl font-bold">Pizza Recalentada en AirFryer</h2>
+            <p class="text-white text-lg mt-2">La mejor manera de revivir tu pizza, dejando la base crujiente y el queso derretido.</p>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-16 flex flex-col md:flex-row gap-10">
+        <div class="md:w-2/3">
+            <h3 class="text-3xl font-bold">Ingredientes</h3>
+            <ul class="mt-4 space-y-3 text-gray-700">
+                <li class="flex items-center">
+                    <input type="checkbox" id="ingrediente1" class="mr-2 w-5 h-5">
+                    <label for="ingrediente1" class="text-lg">Rebanadas de pizza fría (previamente refrigerada o a temperatura ambiente)</label>
+                </li>
+                <li class="flex items-center">
+                    <input type="checkbox" id="ingrediente2" class="mr-2 w-5 h-5">
+                    <label for="ingrediente2" class="text-lg">1 cucharadita de agua (opcional, para evitar sequedad)</label>
+                </li>
+            </ul>
+
+            <h3 class="text-3xl font-bold mt-10">Instrucciones</h3>
+            <ol class="mt-4 space-y-4 text-gray-700 list-decimal list-inside">
+                <li><strong>Precalienta el AirFryer</strong> a 180°C (350°F) por 2 minutos.</li>
+                <li><strong>Coloca las rebanadas</strong> en la canasta, sin superponer (caben 1-2 por tanda).</li>
+                <li><strong>Truco opcional:</strong> Pon 1 cucharadita de agua debajo de la canasta (fuera del papel de horno, si usas) para mantener el equilibrio de humedad.</li>
+                <li><strong>Calienta</strong> 3-5 minutos:
+                    <ul class="list-disc list-inside ml-5 mt-2">
+                        <li><strong>3 min</strong> para pizza delgada o poco queso.</li>
+                        <li><strong>5 min</strong> para bases gruesas o mucho topping (revísala a los 3 min).</li>
+                    </ul>
+                </li>
+                <li><strong>Retira</strong> cuando el queso burbujee y los bordes estén dorados. ¡Disfruta!</li>
+            </ol>
+
+            <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                <h4 class="font-bold text-lg text-yellow-800">Tips:</h4>
+                <ul class="mt-2 space-y-2 text-yellow-700">
+                    <li>• Si la pizza tiene mucho pepperoni, colócalo boca abajo para que se cruja.</li>
+                    <li>• Nunca uses microondas antes (quedará gomosa). ¡El AirFryer es la solución!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="md:w-1/3 bg-secondary p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold">Detalles de la Receta</h3>
+            <p class="mt-2 text-gray-700"><strong>Tiempo Total:</strong> 5-7 minutos</p>
+            <p class="mt-1 text-gray-700"><strong>Porciones:</strong> Depende de las rebanadas</p>
+            <p class="mt-1 text-gray-700"><strong>Calorías:</strong> Igual que la pizza original (¡pero más sabrosa!)</p>
+
+            <h3 class="text-xl font-bold mt-6">Nivel de Dificultad</h3>
+            <p class="mt-2 text-gray-700 flex items-center">
+                <span class="text-primary font-semibold">Fácil</span> 
+                <span class="ml-2 text-yellow-400 text-lg">★ ☆ ☆ ☆ ☆</span>
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutrí Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="/Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="/Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

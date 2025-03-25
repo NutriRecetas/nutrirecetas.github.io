@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Recetas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-900">
+
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">NUTRI RECETAS</h1>
+            
+            <!-- Botón de menú hamburguesa (visible en móvil) -->
+            <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+            </button>
+
+            <!-- Menú normal (visible en escritorio) -->
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidebar móvil -->
+    <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-6">
+            <button id="close-btn" class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Menú</h2>
+            <nav class="space-y-4 text-gray-700">
+                <a href="/index.html" class="block hover:text-primary">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="block hover:text-primary">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="block hover:text-primary">Recetas</a>
+
+            </nav>
+        </div>
+    </div>
+
+    <!-- Overlay oscuro cuando el menú está abierto -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <!-- JavaScript para mostrar y ocultar el sidebar -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+    </script>
+
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-[350px]">
+        <img src="/assets/images/ImagenCabecera2.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Comidas Recientes">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+            <h2 class="text-white text-5xl font-bold">Recetas Fáciles en Airfryer</h2>
+            <p class="text-white text-lg mt-2">Descubre las mejores recetas para hacer en la Air Fryer</p>
+        </div>
+    </section>
+
+    <!-- Sección de Recetas Recientes -->
+    <section class="container mx-auto px-6 py-16">
+        <h3 class="text-3xl font-bold text-center">Nuestras Recetas</h3>
+        <p class="text-gray-700 text-center mt-2">Explora nuestras recetas nutritivas y deliciosas</p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+            <!-- Tarjeta 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/NuggetAirFryer.jpg" class="w-full h-56 object-cover" alt="Nuggets en Airfryer">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Nuggets congelados perfectos en Air Fryer</h4>
+                    <p class="text-gray-700 mt-2">Descubre cómo hacer nuggets en Air Fryer crujientes y dorados sin aceite.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/NuggetsAirFryer.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+            <!-- Croquetas congeladas -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/CroquetasAriFryer.jpg" class="w-full h-56 object-cover" alt="Croquetas crujientes sin aceite">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Croquetas Congeladas del Super en AirFryer</h4>
+                    <p class="text-gray-700 mt-2">Aprende a preparar croquetas crujientes y doradas en la air fryer sin aceite.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/CroquetasCongeladasAirFryer.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+            <!-- Recalentar pizza -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/RecalentarPizza.jpg" class="w-full h-56 object-cover" alt="Recalentar pizza en air fryer">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Cómo recalentar pizza en air fryer</h4>
+                    <p class="text-gray-700 mt-2">El mejor método para recalentar pizza sin que quede dura o gomosa.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/RecalentarPizza.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+            <!-- Postres en air fryer -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/PostreSanoAirfryer.jpg" class="w-full h-56 object-cover" alt="Postres en air fryer">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Postre saludable en air fryer con solo 3 ingredientes</h4>
+                    <p class="text-gray-700 mt-2">Prepara un postre fáciles y sano en tu air fryer en minutos.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/Postre3IngredientesAirFryer.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+            <!-- Chips de zanahoria o calabacín -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/ChipsZanahoriaCalabacin.jpg" class="w-full h-56 object-cover" alt="Chips de zanahoria o calabacín">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Chips de zanahoria y calabacín en air fryer</h4>
+                    <p class="text-gray-700 mt-2">Disfruta de un snack saludable y crujiente en pocos minutos.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/ChipsZanahoriaCalabacin.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+            <!-- Palitos de mozzarella -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/PalitosMozzarella.jpg" class="w-full h-56 object-cover" alt="Palitos de mozzarella en air fryer">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Palitos de mozzarella sin que se abran</h4>
+                    <p class="text-gray-700 mt-2">Evita que los palitos de mozzarella se abran en la freidora con estos trucos.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/PalitosMozzarellaNoAbren.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+            <!-- Empanadas congeladas -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/EmpanadaCongeladas.jpg" class="w-full h-56 object-cover" alt="Empanadas congeladas en air fryer">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Empanadas congeladas en air fryer</h4>
+                    <p class="text-gray-700 mt-2">Tiempo exacto para cocinar empanadas congeladas y lograr un dorado perfecto.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/EmpanadasCongeladasAirFryer.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+            <!-- Pizza fresca de supermercado -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/assets/images/Recetas/PizzaSuper.jpg" class="w-full h-56 object-cover" alt="Pizza fresca en air fryer">
+                <div class="p-6">
+                    <h4 class="text-lg font-semibold">Pizza fresca de supermercado en air fryer</h4>
+                    <p class="text-gray-700 mt-2">Cómo cocinar pizza fresca en la air fryer para un resultado perfecto.</p>
+                    <a href="/Apartados/Categorias/RecetasAirFryer/PizzaSuperAirFryer.html" class="text-primary font-semibold mt-3 inline-block">Ver receta →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutri Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="/Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="/Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para actualizar el año dinámicamente -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
