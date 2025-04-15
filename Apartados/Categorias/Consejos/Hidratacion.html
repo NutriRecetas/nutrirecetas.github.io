@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidrátate de forma inteligente - Nutri Recetas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <link rel="canonical" href="https://nutri-recetas.com/Apartados/Categorias/Consejos/Hidratacion.html" />
+    <meta property="og:url" content="https://nutri-recetas.com/Apartados/Categorias/Consejos/Hidratacion.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hidrátate de forma inteligente - Nutri Recetas">
+    <meta property="og:description" content="Consejos prácticos para mantener una buena hidratación diaria de forma sencilla y saludable.">
+    <meta name="keywords" content="recetas saludables, comida saludable, comida vegana, preparación rápida, NutriRecetas">
+    <meta property="og:image" content="https://nutri-recetas.com/assets/images/Consejos/Hidratacion.jpg">
+    <meta name="description" content="Consejos prácticos para mantener una buena hidratación diaria de forma sencilla y saludable. Descubre por qué el agua es tu mejor aliada.">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6368355937508471"
+        crossorigin="anonymous"></script>
+</head>
+<body class="font-sans text-gray-900">
+
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/index.html"><h1 class="text-2xl font-bold">NUTRI RECETAS</h1></a>
+            
+            <!-- Botón de menú hamburguesa (visible en móvil) -->
+            <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+            </button>
+
+            <!-- Menú normal (visible en escritorio) -->
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidebar móvil -->
+    <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-6">
+            <button id="close-btn" class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Menú</h2>
+            <nav class="space-y-4 text-gray-700">
+                <a href="/index.html" class="block hover:text-primary">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="block hover:text-primary">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="block hover:text-primary">Recetas</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Overlay oscuro cuando el menú está abierto -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <!-- JavaScript para mostrar y ocultar el sidebar -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+    </script>
+
+
+
+    <section class="relative w-full h-[400px]">
+        <img src="/assets/images/Consejos/Hidratacion.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Hidratación">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start px-10 md:px-20">
+            <h2 class="text-white text-4xl font-bold">Hidrátate de forma inteligente</h2>
+            <p class="text-white text-lg mt-2">Tu salud comienza con un vaso de agua</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+        <h1 class="text-3xl font-bold text-primary mb-4">Hidrátate de forma inteligente</h1>
+        <p class="text-gray-700 mb-4">Mantener una buena hidratación no es solo cuestión de tomar agua: es una herramienta fundamental para cuidar tu salud física y mental. El cuerpo humano está compuesto en gran parte por agua, y cada célula, tejido y órgano necesita de ella para funcionar correctamente. Desde regular la temperatura corporal hasta facilitar la digestión, el agua participa en casi todos los procesos vitales.</p>
+
+        <p class="text-gray-700 mb-4">Hidratarse bien no se trata solo de cantidad, sino también de constancia y estrategia. A lo largo del día, tu cuerpo pierde agua naturalmente a través de la respiración, la sudoración, la orina y otras funciones. Si no repones esos líquidos, podrías experimentar fatiga, falta de concentración, dolores de cabeza e incluso problemas digestivos o musculares.</p>
+
+        <h2 class="text-2xl font-bold text-primary mt-8 mb-4">¿Por qué es tan importante la hidratación?</h2>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Mejora tu rendimiento físico y mental</h3>
+        <p class="text-gray-700 mb-4">Un cuerpo hidratado responde mejor: tus músculos trabajan de manera más eficiente y tu cerebro se mantiene enfocado. Incluso una deshidratación leve puede afectar tu estado de ánimo, memoria y niveles de energía.</p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Favorece la digestión y el metabolismo</h3>
+        <p class="text-gray-700 mb-4">El agua facilita el proceso digestivo y ayuda a prevenir el estreñimiento. Además, una hidratación adecuada optimiza el metabolismo, lo que es beneficioso si estás trabajando en controlar tu peso.</p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Regula la temperatura corporal</h3>
+        <p class="text-gray-700 mb-4">Cuando haces ejercicio o hace calor, tu cuerpo regula la temperatura a través del sudor. Sin suficiente agua, esta función se vuelve menos eficiente, aumentando el riesgo de fatiga o golpes de calor.</p>
+
+        <h2 class="text-2xl font-bold text-primary mt-10 mb-4">Consejos para hidratarte mejor cada día</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>💧 Bebe al menos 6–8 vasos de agua al día</strong>. Esta cifra puede aumentar si haces ejercicio, vives en un clima caluroso o consumes alimentos salados.</li>
+            <li><strong>🍋 Dale un toque de sabor natural</strong>. Si te cuesta tomar agua sola, prueba agregar rodajas de limón, pepino, hojas de menta o frutas rojas.</li>
+            <li><strong>⏰ Usa recordatorios</strong>. Establece alarmas en el móvil o utiliza aplicaciones que te ayuden a llevar un seguimiento de tu ingesta de agua.</li>
+            <li><strong>🙋‍♂️ Incluye alimentos ricos en agua</strong>. Frutas como la sandía, el melón, la naranja o el pepino aportan hidratación extra.</li>
+            <li><strong>🧴 Lleva siempre una botella reutilizable contigo</strong>. Tener agua a mano facilita el hábito.</li>
+        </ul>
+
+        <p class="mt-6 text-gray-700">No necesitas estar tomando agua constantemente ni forzarte más allá de lo necesario. La clave está en adoptar pequeños gestos diarios que te ayuden a mantenerte hidratado sin que se vuelva una carga.</p>
+
+        <p class="mt-2 text-sm text-gray-600 italic">A veces, el cansancio o el hambre son señales de que necesitas beber, no comer. Aprende a escuchar a tu cuerpo y conviértelo en un aliado.</p>
+    </main>
+
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutri Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="/Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="/Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

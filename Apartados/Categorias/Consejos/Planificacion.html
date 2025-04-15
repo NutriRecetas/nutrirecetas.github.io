@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Recetas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <link rel="canonical" href="https://nutri-recetas.com/Apartados/Categorias/Consejos/Planificacion.html" />
+    <meta property="og:url" content="https://nutri-recetas.com/Apartados/Categorias/Consejos/Planificacion.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nutri Recetas - Recetas Saludables">
+    <meta property="og:description" content="Nutri Recetas ofrece recetas saludables adaptadas a diversas necesidades dietéticas. ¡Alimentación saludable accesible y deliciosa!">
+    <meta name="keywords" content="rectas saludables, receta saludable, comida vegana, preparación rápida, NutriRecetas">
+    <meta property="og:image" content="https://nutri-recetas.com/assets/images/ImagenCabecera1.jpg">
+    <meta name="description" content="Nutri Recetas ofrece recetas saludables adaptadas a diversas necesidades dietéticas. Opciones para condiciones específicas de salud. ¡Únete a nosotros para hacer la alimentación saludable más accesible y deliciosa!">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6368355937508471"
+    crossorigin="anonymous"></script>
+</head>
+<body class="font-sans text-gray-900">
+
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/index.html"><h1 class="text-2xl font-bold">NUTRI RECETAS</h1></a>
+            
+            <!-- Botón de menú hamburguesa (visible en móvil) -->
+            <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+            </button>
+
+            <!-- Menú normal (visible en escritorio) -->
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidebar móvil -->
+    <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-6">
+            <button id="close-btn" class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Menú</h2>
+            <nav class="space-y-4 text-gray-700">
+                <a href="/index.html" class="block hover:text-primary">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="block hover:text-primary">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="block hover:text-primary">Recetas</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Overlay oscuro cuando el menú está abierto -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <!-- JavaScript para mostrar y ocultar el sidebar -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+    </script>
+
+    <!-- Sección Hero -->
+    <section class="relative w-full h-[500px]">
+        <img src="/assets/images/Consejos/Planificacion.png" class="absolute inset-0 w-full h-full object-cover" alt="Comida Saludable">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start px-10 md:px-20">
+            <h2 class="text-white text-5xl font-bold">Planifica tus comidas como un pro</h2>
+            <p class="text-white text-lg mt-2">Planear con antelación tus comidas semanales te ayuda a ahorrar tiempo, evitar desperdicios y mantenerte en una alimentación saludable.</p>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <section class="container mx-auto px-6 py-20">
+        <h1 class="text-3xl font-bold text-primary mb-4">Planifica tus comidas como un profesional</h1>
+        <p class="text-gray-700 mb-4">Planificar tus comidas semanales es uno de los hábitos más efectivos para llevar una alimentación saludable y equilibrada sin caer en el estrés del “¿qué como hoy?”. Más allá de la organización, esta práctica te ayuda a optimizar tu tiempo, reducir el desperdicio de alimentos y ahorrar dinero, todo mientras mejoras tu relación con la comida.</p>
+        <p class="text-gray-700 mb-4">Una buena planificación no significa comer lo mismo todos los días ni pasarte horas en la cocina. Se trata de tener una guía clara, adaptada a tus gustos, horarios y objetivos, que te permita tomar decisiones conscientes y sostenibles.</p>
+
+        <h2 class="text-2xl font-bold text-primary mt-8 mb-4">¿Por qué deberías empezar a planificar tus comidas?</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>Evitas decisiones impulsivas</strong> - Cuando tienes claro qué vas a comer, es más fácil evitar recurrir a opciones poco saludables o ultraprocesadas. Esto también reduce el riesgo de saltarte comidas por falta de ideas o tiempo.</li>
+            <li><strong>Ahorras tiempo y dinero</strong> - Al comprar solo lo que necesitas, reduces las visitas al supermercado y evitas gastos innecesarios. Cocinar por lotes o dejar preparadas algunas comidas también te ahorra horas durante la semana.</li>
+            <li><strong>Reduces el desperdicio de alimentos</strong> - Tener un menú semanal te permite aprovechar mejor los ingredientes y evitar que se estropeen en la nevera. Además, puedes planear recetas que reutilicen restos o ingredientes comunes.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-primary mt-8 mb-4">Consejos para una planificación eficaz</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>🗓 Crea un menú semanal simple y equilibrado</strong> - No necesitas convertirte en chef ni diseñar menús gourmet. Piensa en platos variados, que incluyan vegetales, fuentes de proteína, hidratos de carbono saludables y grasas buenas. Ten en cuenta tu rutina, tus compromisos y deja hueco para algún capricho.</li>
+            <li><strong>🛒 Haz una lista de la compra organizada</strong> - Una lista bien hecha es tu mejor aliada. Revísala antes de salir, agrúpala por secciones (verduras, proteínas, lácteos, despensa…) y ajústate a ella para evitar compras impulsivas o repetidas.</li>
+            <li><strong>🍱 Cocina por lotes y almacena en tápers</strong> - Dedica un par de horas a la semana a preparar algunas comidas completas o ingredientes base (arroz, legumbres, verduras asadas…). Guarda porciones en la nevera o el congelador y tendrás siempre algo listo para calentar.</li>
+            <li><strong>📅 Incluye comidas de “descongelación” o aprovechamiento</strong> - Planifica también uno o dos días sin cocinar, en los que uses sobras, platos congelados o improvises con lo que tengas. Esto da flexibilidad a tu menú y evita el agotamiento.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-primary mt-8 mb-4">Herramientas que te pueden ayudar</h2>
+        <p class="text-gray-700 mb-4">Existen numerosas aplicaciones que facilitan esta tarea y te ayudan a seguir tu progreso. Algunas de las más útiles son:</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>Yazio</strong>: perfecta para quienes buscan controlar las calorías o seguir objetivos específicos (pérdida de peso, ganancia muscular, etc.).</li>
+            <li><strong>Mealime</strong>: ideal para crear menús saludables en pocos pasos, con recetas fáciles y lista de la compra integrada.</li>
+            <li><strong>Paprika o Trello</strong>: si prefieres algo más manual, estas apps te permiten organizar recetas, listas y calendarios según tu estilo.</li>
+        </ul>
+
+        <p class="mt-4 text-sm text-gray-600 italic">💡 Consejo extra: No te obsesiones con seguir el menú al pie de la letra. La clave es la flexibilidad. Si un día surge un plan o simplemente no te apetece lo que habías previsto, adapta sin culpa. El objetivo es ayudarte, no presionarte.</p>
+
+        <p class="mt-8 text-gray-700">Adoptar la planificación de comidas no solo mejora tu alimentación, sino que te da libertad mental y estructura en tu día a día. Con pequeños pasos puedes convertirlo en un hábito que te acompañe a largo plazo. Y lo mejor de todo: comerás mejor, con menos esfuerzo y disfrutando más de cada comida.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutri Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para actualizar el año dinámicamente -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

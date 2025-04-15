@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Recetas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/images/ShortCutNutriRecetas.png" />
+    <meta property="og:url" content="https://nutri-recetas.com/Apartados/Consejos.html">
+    <link rel="canonical" href="https://nutri-recetas.com/Apartados/Consejos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nutri Recetas - Recetas Saludables">
+    <meta name="keywords" content="recetas saludables, comida saludable, comida vegana, preparación rápida, NutriRecetas">
+    <meta property="og:description" content="Nutri Recetas ofrece recetas saludables adaptadas a diversas necesidades dietéticas. ¡Alimentación saludable accesible y deliciosa!">
+    <meta property="og:image" content="https://nutri-recetas.com/assets/images/ImagenCabecera1.jpg">
+    <meta name="description" content="Nutri Recetas ofrece recetas saludables adaptadas a diversas necesidades dietéticas. Opciones para condiciones específicas de salud. ¡Únete a nosotros para hacer la alimentación saludable más accesible y deliciosa!">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5DA423',
+                        secondary: '#F5F7F4',
+                    },
+                }
+            }
+        }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6368355937508471"
+    crossorigin="anonymous"></script>
+</head>
+<body class="font-sans text-gray-900">
+
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/index.html"><h1 class="text-2xl font-bold">NUTRI RECETAS</h1></a>
+            
+            <!-- Botón de menú hamburguesa (visible en móvil) -->
+            <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+            </button>
+
+            <!-- Menú normal (visible en escritorio) -->
+            <nav class="space-x-6 text-gray-700 hidden md:flex">
+                <a href="/index.html" class="hover:text-black">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="hover:text-black">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="hover:text-black">Recetas</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidebar móvil -->
+    <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-6">
+            <button id="close-btn" class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Menú</h2>
+            <nav class="space-y-4 text-gray-700">
+                <a href="/index.html" class="block hover:text-primary">Inicio</a>
+                <a href="/Apartados/Categorias.html" class="block hover:text-primary">Categorías</a>
+                <a href="/Apartados/Recetas.html" class="block hover:text-primary">Recetas</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Overlay oscuro cuando el menú está abierto -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <!-- JavaScript para mostrar y ocultar el sidebar -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const closeBtn = document.getElementById("close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+    </script>
+
+  <!-- Hero -->
+  <section class="relative w-full h-[500px]">
+    <img src="/assets/images/CabeceraConsejos.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Comida Saludable">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start px-10 md:px-20">
+        <h2 class="text-white text-5xl font-bold">Consejos Nutricionales</h2>
+        <p class="text-white text-lg mt-2">Pequeños cambios, grandes resultados</p>
+    </div>
+</section>
+
+  <!-- Consejos -->
+  <main class="container mx-auto px-6 py-16 space-y-20">
+
+    <!-- Consejo Planificacion -->
+    <a href="/Apartados/Categorias/Consejos/Planificacion.html">
+    <section class="md:flex gap-10 items-center">
+      <img  src="/assets/images/Consejos/Planificacion.png" alt="Planifica tus comidas" class="md:w-1/2 rounded-lg shadow-md mb-6 md:mb-0">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-bold text-primary mb-4">Planifica tus comidas como un pro</h3>
+        <p class="text-gray-700 mb-2">Planear con antelación tus comidas semanales te ayuda a ahorrar tiempo, evitar desperdicios y mantenerte en una alimentación saludable.</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>🗓 Haz un menú semanal simple y equilibrado.</li>
+          <li>🛒 Compra solo lo que necesitas con una lista clara.</li>
+          <li>🍱 Cocina por lotes y guarda en tápers.</li>
+        </ul>
+        <p class="mt-2 text-sm text-gray-600 italic">💡 Tip: Usa apps como Yazio o Mealime para organizarte.</p>
+      </div>
+    </section>
+    </a>
+
+    <!-- Consejo Hidratacion -->
+     <a href="/Apartados/Categorias/Consejos/Hidratacion.html">
+     <section class="md:flex gap-10 items-center flex-row-reverse">
+      <img src="/assets/images/Consejos/Hidratacion.jpg" alt="Hidratación" class="md:w-1/2 rounded-lg shadow-md mb-6 md:mb-0">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-bold text-primary mb-4">Hidrátate de forma inteligente</h3>
+        <p class="text-gray-700 mb-2">La hidratación es vital para mantener tus funciones corporales activas y tu mente despierta.</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>💧 Bebe 6–8 vasos de agua al día (más si haces ejercicio).</li>
+          <li>🍋 Dale sabor natural con limón, pepino o frutas rojas.</li>
+          <li>⏰ Usa recordatorios en el móvil o apps para no olvidarte.</li>
+        </ul>
+        <p class="mt-2 text-sm text-gray-600 italic">💡 Tip: Lleva siempre una botella reutilizable contigo.</p>
+      </div>
+    </section>
+    </a>
+
+    <!-- Consejo Comer Vegetales -->
+    <a href="/Apartados/Categorias/Consejos/Aumenta-vegetales.html">
+    <section class="md:flex gap-10 items-center">
+      <img src="/assets/images/Consejos/VegetalesSinCuenta.jpg" alt="Vegetales" class="md:w-1/2 rounded-lg shadow-md mb-6 md:mb-0">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-bold text-primary mb-4">Aumenta tu consumo de vegetales sin darte cuenta</h3>
+        <p class="text-gray-700 mb-2">Los vegetales no tienen que ser aburridos. Hay muchas formas de integrarlos en tu día a día.</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>🌈 Come por colores: cada uno aporta diferentes nutrientes.</li>
+          <li>🥗 Inclúyelos en desayunos, batidos o snacks.</li>
+          <li>🍝 Agrégalos a pastas, guisos o arroz.</li>
+        </ul>
+        <p class="mt-2 text-sm text-gray-600 italic">💡 Tip: Ten vegetales congelados listos para cocinar rápido.</p>
+      </div>
+    </section>
+    </a>
+    <!-- Consejo Antojos sanos -->
+    <a href="/Apartados/Categorias/Consejos/Antojos.html">
+    <section class="md:flex gap-10 items-center flex-row-reverse">
+      <img src="/assets/images/Consejos/AntojosSanos.jpg" alt="Antojos saludables" class="md:w-1/2 rounded-lg shadow-md mb-6 md:mb-0">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-bold text-primary mb-4">Elimina los antojos sin dejar de disfrutar</h3>
+        <p class="text-gray-700 mb-2">Controlar los antojos no significa prohibir, sino aprender a elegir mejor.</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>🍫 Reemplaza dulces con opciones como dátiles con cacao o chocolate 85%.</li>
+          <li>🍓 Ten snacks saludables siempre a mano.</li>
+          <li>🍦 Disfruta con moderación, no con culpa.</li>
+        </ul>
+        <p class="mt-2 text-sm text-gray-600 italic">💡 Tip: Si no está en casa, ¡no lo puedes picar!</p>
+      </div>
+    </section>
+    </a>
+  </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#5DA423] py-8 text-center text-white mt-10">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-semibold">© <span id="year"></span> Nutri Recetas. Todos los derechos reservados.</p>
+            <p class="mt-1">Contacto: 
+                <a href="mailto:nutri.recetas.com@gmail.com" class="underline">nutri.recetas.com@gmail.com</a>
+            </p>
+            <div class="mt-4 space-x-6">
+                <a href="Politica.html" class="hover:underline">Política de Privacidad</a>
+                <a href="Terminos.html" class="hover:underline">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para actualizar el año dinámicamente -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
+</body>
+</html>
